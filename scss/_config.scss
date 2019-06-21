@@ -23,10 +23,19 @@ $background-opacity: 0.9;
         right: 0;
         height: 100%;
         width: 100%;
-        background: rgba($primary-color, $background-opacity);
         z-index: -1;
+        background: rgba($primary-color, $background-opacity);
       }
     }
+  }
+}
+
+//set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return black;
+  } @else {
+    @return white;
   }
 }
 
