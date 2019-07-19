@@ -1,6 +1,8 @@
 // Menu button
+//both menu are hidden, only shown for phone. see mobile.scss
 
 .menu-btn {
+  display: none;
   position: absolute;
   z-index: 3;
   right: 35px;
@@ -31,6 +33,7 @@
 //menu overlay
 
 .menu {
+  display: none;
   position: fixed;
   top: 0;
   width: 100%;
@@ -121,5 +124,19 @@
 @for $x from 1 to 5 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.4s;
+  }
+}
+
+
+//Nav for large
+.nav-large-item {
+  padding-left: 2rem;
+  padding-top: 1rem;
+  list-style-type: none;
+  display: inline-block;
+
+  &.right{
+    float: right;
+    padding-right: 3rem;
   }
 }
