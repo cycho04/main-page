@@ -10,10 +10,29 @@
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
+  //added next two for responsive menu
+  .large-nav {
+    padding: 0 4rem;
+  }
+  .nav-large-item {
+  
+    &.right{
+      padding-right: 0.5rem;
+    }
+  }
 }
 
 //Tablets/small laptops
 @include mediaMedium {
+  .menu {
+    display: block;
+  }
+  .menu-btn{
+    display: block;
+  }
+  .large-nav{
+    display: none;
+  }
   main {
     align-items: center;
     text-align: center;
@@ -66,15 +85,6 @@
 
 //phone
 @include mediaSmall {
-  .menu {
-    display: block;
-  }
-  .menu-btn{
-    display: block;
-  }
-  .large-nav{
-    display: none;
-  }
   main#home h1 {
     margin-top: 10vh;
   }

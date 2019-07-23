@@ -130,13 +130,23 @@
 
 //Nav for large
 .nav-large-item {
-  padding-left: 2rem;
-  padding-top: 1rem;
+  padding: 1rem 1rem;
   list-style-type: none;
   display: inline-block;
 
   &.right{
     float: right;
-    padding-right: 3rem;
   }
+
+  &.brand{
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: $primary-color;
+  }
+}
+
+.large-nav {
+  background-color: black;
+  padding: 0.75rem 6rem;
+  margin: auto;
 }

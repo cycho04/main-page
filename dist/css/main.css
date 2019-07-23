@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap");
 .menu-btn {
   display: none;
   position: absolute;
@@ -92,13 +93,20 @@
   transition-delay: 1.6s; }
 
 .nav-large-item {
-  padding-left: 2rem;
-  padding-top: 1rem;
+  padding: 1rem 1rem;
   list-style-type: none;
   display: inline-block; }
   .nav-large-item.right {
-    float: right;
-    padding-right: 3rem; }
+    float: right; }
+  .nav-large-item.brand {
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: grey; }
+
+.large-nav {
+  background-color: black;
+  padding: 0.75rem 6rem;
+  margin: auto; }
 
 * {
   box-sizing: border-box; }
@@ -108,7 +116,7 @@ body {
   color: black;
   height: 100%;
   margin: 0;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Alegreya Sans', sans-serif;
   line-height: 1.5; }
   body#background-image {
     background: url(../img/background.jpg);
@@ -254,9 +262,19 @@ main {
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .large-nav {
+    padding: 0 4rem; }
+  .nav-large-item.right {
+    padding-right: 0.5rem; } }
 
 @media screen and (max-width: 768px) {
+  .menu {
+    display: block; }
+  .menu-btn {
+    display: block; }
+  .large-nav {
+    display: none; }
   main {
     align-items: center;
     text-align: center; }
@@ -288,12 +306,6 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  .menu {
-    display: block; }
-  .menu-btn {
-    display: block; }
-  .large-nav {
-    display: none; }
   main#home h1 {
     margin-top: 10vh; }
   .projects {
